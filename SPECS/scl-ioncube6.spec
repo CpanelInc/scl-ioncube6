@@ -33,9 +33,9 @@
 Name:    %{?scl_prefix}php-ioncube6
 Vendor:  cPanel, Inc.
 Summary: Experimental v6 Loader for ionCube-encoded PHP files
-Version: 6.0.4
+Version: 6.1.0
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4572 for more details
-%define release_prefix 3
+%define release_prefix 1
 Release: %{release_prefix}%{?dist}.cpanel
 License: Redistributable
 Group:   Development/Languages
@@ -95,6 +95,9 @@ EOF
 %{php_extdir}/ioncube_loader_lin_%{php_version}.so
 
 %changelog
+* Thu Jun 08 2017 Cory McIntire <cory@cpanel.net> - 6.1.0-1
+- EA-6187: update from version 6.0.4 to 6.1.0
+
 * Mon Jan 30 2017 Dan Muey <dan@cpanel.net> - 6.0.4-3
 - EA-5837: updated vendor field
 
