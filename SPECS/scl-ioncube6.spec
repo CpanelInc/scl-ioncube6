@@ -1,5 +1,3 @@
-%define debug_package %{nil}
-
 # Package namespaces
 %global ns_name ea
 %global ns_dir /opt/cpanel
@@ -35,7 +33,7 @@ Vendor:  cPanel, Inc.
 Summary: v6 Loader for ionCube-encoded PHP files
 Version: 6.1.0
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4572 for more details
-%define release_prefix 3
+%define release_prefix 4
 Release: %{release_prefix}%{?dist}.cpanel
 License: Redistributable
 Group:   Development/Languages
@@ -95,6 +93,9 @@ EOF
 %{php_extdir}/ioncube_loader_lin_%{php_version}.so
 
 %changelog
+* Tue May 09 2023 Brian Mendoza <brian.mendoza@cpanel.net> - 6.1.0-4
+- ZC-10936: Clean up Makefile and remove debug-package-nil
+
 * Tue Dec 28 2021 Dan Muey <dan@cpanel.net> - 6.1.0-3
 - ZC-9589: Update DISABLE_BUILD to match OBS
 
